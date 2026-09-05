@@ -1,5 +1,5 @@
 import '../types.dart';
 
 abstract class DictionarySerializerService {
-  Dictionary deserialize(String text);
+  Dictionary deserialize(String jsonString);
 }

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get_it/get_it.dart';
+import '../state.dart';
 import '../theme.dart';
 import '../widgets.dart';
 
@@ -7,20 +10,33 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: mainPadding,
-      child: Column(
-        children: [
-          PanelWidget(
-            title: 'Panel title 1',
-            text: 'Panel text 1. Panel text 1. Panel text 1. Panel text 1. Panel text 1.',
-            iconDataEnabled: Icons.mic,
-            iconDataDisabled: Icons.mic_off,
-            label: 'Panel 1 button',
-            onPressed: () {},
-          ),
-        ],
+    final DictionaryCubit dictionaryCubit = GetIt.I<DictionaryCubit>();
+    return BlocProvider.value(
+      value: dictionaryCubit,
+      child: BlocBuilder<DictionaryCubit, DictionaryState>(
+        builder: (context, state) => _HomePageView(state: state),
       ),
+    );
+  }
+}
+
+class _HomePageView extends StatelessWidget {
+  const _HomePageView({required this.state});
+  final DictionaryState state;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          padding: mainPadding,
+          child: const Column(children: [InputPanelWidget(text: '')]),
+        ),
+        Container(
+          padding: mainPadding,
+          child: const Column(children: [OutputPanelWidget()]),
+        ),
+      ],
     );
   }
 }

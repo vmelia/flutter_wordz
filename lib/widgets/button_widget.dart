@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_wordz2/theme.dart';
+import '../theme.dart';
 
 class ButtonWidget extends StatelessWidget {
   const ButtonWidget({

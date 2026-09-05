@@ -4,21 +4,24 @@ import '../interfaces.dart';
 import '../types.dart';
 
 class DictionaryState {
-  const DictionaryState({this.output = const []});
-
+  const DictionaryState({this.input = '', this.output = const []});
+  final String input;
   final Iterable<String> output;
 }
 
 class DictionaryCubit extends Cubit<DictionaryState> {
   DictionaryCubit(this.dictionaryService) : super(const DictionaryState());
+
   final DictionaryService dictionaryService;
+  late Dictionary dictionary;
 
-  Future<void> getAllWords(Dictionary dictionary) async =>
-      emit(DictionaryState(output: dictionaryService.getAllWords(dictionary)));
+  void initialize(String path) => dictionaryService.initialize(path);
 
-  Future<void> getAnagrams(Dictionary dictionary, String text) async =>
-      emit(DictionaryState(output: dictionaryService.getAnagrams(dictionary, text)));
+  void setInput(String input) => emit(DictionaryState(input: input));
 
-  Future<void> getMatching(Dictionary dictionary, String text) async =>
-      emit(DictionaryState(output: dictionaryService.getMatching(dictionary, text)));
+  void getAllWords() => emit(DictionaryState(output: dictionaryService.getAllWords()));
+
+  void getAnagrams() => emit(DictionaryState(output: dictionaryService.getAnagrams(state.input)));
+
+  void getMatches() => emit(DictionaryState(output: dictionaryService.getMatches(state.input)));
 }

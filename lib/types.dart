@@ -1,1 +1,1 @@
-typedef Dictionary = Map<String, List<String>>;
+typedef Dictionary = Map<String, Set<String>>;
