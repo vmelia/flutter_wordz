@@ -26,17 +26,21 @@ class _HomePageView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          padding: mainPadding,
-          child: const Column(children: [InputPanelWidget(text: '')]),
-        ),
-        Container(
-          padding: mainPadding,
-          child: const Column(children: [OutputPanelWidget()]),
-        ),
-      ],
+    return Expanded(
+      child: Column(
+        children: [
+          Container(
+            padding: mainPadding,
+            child: const InputPanelWidget(text: ''),
+          ),
+          Flexible(
+            child: Container(
+              padding: mainPadding,
+              child: const OutputPanelWidget(),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

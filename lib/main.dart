@@ -40,7 +40,16 @@ class MainScaffoldWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Center(child: Text('Anagram Finder')), elevation: 0),
+      appBar: AppBar(
+        backgroundColor: panelHeaderColour,
+        title: const Center(
+          child: Text(
+            'Anagram Finder',
+            style: TextStyle(color: iconColour),
+          ),
+        ),
+        elevation: 0,
+      ),
       body: const SafeArea(child: HomePage()),
     );
   }

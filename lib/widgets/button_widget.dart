@@ -15,13 +15,14 @@ class ButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: panelBodyColour,
+      height: 50,
+      color: panelHeaderColour,
       padding: componentPadding,
       child: Stack(
         children: [
           FloatingActionButton(
             onPressed: onPressed,
-            backgroundColor: panelHeaderColour,
+            backgroundColor: panelBodyColour,
             child: Icon(iconData, color: iconColour),
           ),
         ],

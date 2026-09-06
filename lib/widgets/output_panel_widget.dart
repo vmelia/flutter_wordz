@@ -43,10 +43,12 @@ class _OutputPanelWidgetView extends StatelessWidget {
             backgroundColour: panelHeaderColour,
             textAlign: TextAlign.center,
           ),
-          TextWidget(
-            text: state.output.join('\n'),
-            backgroundColour: panelBodyColour,
-            textAlign: TextAlign.left,
+          Expanded(
+            child: TextWidget(
+              text: state.output.join('\n'),
+              backgroundColour: panelBodyColour,
+              textAlign: TextAlign.left,
+            ),
           ),
         ],
       ),
