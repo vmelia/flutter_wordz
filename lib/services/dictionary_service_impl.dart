@@ -7,10 +7,14 @@ class DictionaryServiceImpl extends DictionaryService {
   DictionaryServiceImpl(this.fileReaderService, this.dictionarySerializerService);
   final FileReaderService fileReaderService;
   final DictionarySerializerService dictionarySerializerService;
-  late Dictionary _dictionary;
+  late Dictionary _dictionary = Dictionary(data: {});
 
   @override
   Future<void> initialize(String path) async {
+    if (_dictionary.isInitialized) {
+      return;
+    }
+
     final String text = await fileReaderService.readFile(path);
     _dictionary = dictionarySerializerService.deserialize(text);
   }

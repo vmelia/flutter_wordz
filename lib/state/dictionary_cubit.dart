@@ -1,7 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../interfaces.dart';
-import '../types.dart';
 
 class DictionaryState {
   const DictionaryState({this.input = '', this.output = const []});
@@ -11,9 +9,7 @@ class DictionaryState {
 
 class DictionaryCubit extends Cubit<DictionaryState> {
   DictionaryCubit(this.dictionaryService) : super(const DictionaryState());
-
   final DictionaryService dictionaryService;
-  late Dictionary dictionary;
 
   Future<void> initialize(String path) async => dictionaryService.initialize(path);
 
