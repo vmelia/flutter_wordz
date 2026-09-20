@@ -39,12 +39,10 @@ class InputPanelWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               ButtonWidget(
-                label: 'Anagrams',
                 iconData: Icons.search,
                 onPressed: () => dictionaryCubit.getAnagrams(),
               ),
               ButtonWidget(
-                label: 'Matches',
                 iconData: Icons.pattern,
                 onPressed: () => dictionaryCubit.getMatches(),
               ),
