@@ -19,7 +19,7 @@ class TextWidget extends StatelessWidget {
       color: backgroundColour,
       child: Text(
         text,
-        style: const TextStyle(color: textColour),
+        style: themeTextStyle,
         textAlign: textAlign,
       ),
     );

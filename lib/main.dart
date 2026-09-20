@@ -41,7 +41,7 @@ class MainScaffoldWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: panelHeaderColour,
+        backgroundColor: mainBackgroundColour,
         title: const Center(
           child: Text(
             'Anagram Finder',

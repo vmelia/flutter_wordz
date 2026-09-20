@@ -19,7 +19,7 @@ class TextFieldWidget extends StatelessWidget {
       color: backgroundColour,
       child: TextField(
         onChanged: onChanged,
-        style: const TextStyle(color: textColour),
+        style: themeTextStyle,
         textAlign: textAlign,
       ),
     );
