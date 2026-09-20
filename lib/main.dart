@@ -40,7 +40,7 @@ class MainScaffoldWidget extends StatelessWidget {
         ),
         elevation: 0,
       ),
-      body: const SafeArea(child: HomePage()),
+      body: SafeArea(child: HomePage()),
     );
   }
 }

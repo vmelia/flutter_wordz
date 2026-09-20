@@ -8,11 +8,13 @@ import '../widgets.dart';
 const String PATH = 'assets/data/dictionary.json';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  HomePage({super.key}) {
+    GetIt.I<DictionaryCubit>().initialize(PATH);
+  }
 
   @override
   Widget build(BuildContext context) {
-    final DictionaryCubit dictionaryCubit = GetIt.I<DictionaryCubit>()..initialize(PATH);
+    final DictionaryCubit dictionaryCubit = GetIt.I<DictionaryCubit>();
     return BlocProvider.value(
       value: dictionaryCubit,
       child: BlocBuilder<DictionaryCubit, DictionaryState>(
