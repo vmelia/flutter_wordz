@@ -1,6 +1,9 @@
-class Dictionary {
-  Dictionary({required this.data});
-  final Map<String, Set<String>> data;
+import 'dart:collection';
 
-  bool get isInitialized => data.isNotEmpty;
+class Dictionary({required final Map<String, Set<String>> _data}) {
+  factory Dictionary.empty() => Dictionary(data: {});
+  
+  Map<String, Set<String>> get data => UnmodifiableMapView<String, Set<String>>(_data);
+
+  bool get isInitialized => _data.isNotEmpty;
 }
