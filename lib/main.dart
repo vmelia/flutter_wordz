@@ -6,8 +6,6 @@ import 'services.dart';
 import 'state.dart';
 import 'theme.dart';
 
-const String PATH = 'assets/data/dictionary.json';
-
 void main() {
   GetIt.I.registerSingleton<FileReaderService>(FileReaderServiceImpl());
   GetIt.I.registerSingleton<DictionarySerializerService>(DictionarySerializerServiceImpl());
@@ -22,16 +20,11 @@ class MainApp extends StatelessWidget {
   const MainApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    final DictionaryCubit dictionaryCubit = GetIt.I<DictionaryCubit>();
-    dictionaryCubit.initialize(PATH);
-
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(scaffoldBackgroundColor: mainBackgroundColour),
-      home: const MainScaffoldWidget(),
-    );
-  }
+  Widget build(BuildContext context) => MaterialApp(
+    debugShowCheckedModeBanner: false,
+    theme: ThemeData(scaffoldBackgroundColor: mainBackgroundColour),
+    home: const MainScaffoldWidget(),
+  );
 }
 
 class MainScaffoldWidget extends StatelessWidget {

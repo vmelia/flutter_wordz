@@ -5,12 +5,14 @@ import '../state.dart';
 import '../theme.dart';
 import '../widgets.dart';
 
+const String PATH = 'assets/data/dictionary.json';
+
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final DictionaryCubit dictionaryCubit = GetIt.I<DictionaryCubit>();
+    final DictionaryCubit dictionaryCubit = GetIt.I<DictionaryCubit>()..initialize(PATH);
     return BlocProvider.value(
       value: dictionaryCubit,
       child: BlocBuilder<DictionaryCubit, DictionaryState>(
