@@ -15,13 +15,16 @@ class DictionaryCubit extends Cubit<DictionaryState> {
   final DictionaryService dictionaryService;
   late Dictionary dictionary;
 
-  void initialize(String path) => dictionaryService.initialize(path);
+  Future<void> initialize(String path) async => dictionaryService.initialize(path);
 
   void setInput(String input) => emit(DictionaryState(input: input));
 
-  void getAllWords() => emit(DictionaryState(output: dictionaryService.getAllWords()));
+  void getAllWords() =>
+      emit(DictionaryState(input: state.input, output: dictionaryService.getAllWords()));
 
-  void getAnagrams() => emit(DictionaryState(output: dictionaryService.getAnagrams(state.input)));
+  void getAnagrams() =>
+      emit(DictionaryState(input: state.input, output: dictionaryService.getAnagrams(state.input)));
 
-  void getMatches() => emit(DictionaryState(output: dictionaryService.getMatches(state.input)));
+  void getMatches() =>
+      emit(DictionaryState(input: state.input, output: dictionaryService.getMatches(state.input)));
 }

@@ -43,10 +43,7 @@ class MainScaffoldWidget extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: mainBackgroundColour,
         title: const Center(
-          child: Text(
-            'Anagram Finder',
-            style: TextStyle(color: iconColour),
-          ),
+          child: Text('Anagram Finder', style: TextStyle(color: iconColour)),
         ),
         elevation: 0,
       ),

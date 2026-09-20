@@ -5,8 +5,7 @@ import '../theme.dart';
 import '../widgets.dart';
 
 class InputPanelWidget extends StatelessWidget {
-  const InputPanelWidget({super.key, required this.text});
-  final String text;
+  const InputPanelWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
