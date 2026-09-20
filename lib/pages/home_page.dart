@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
+
 import '../state.dart';
 import '../theme.dart';
 import '../widgets.dart';
@@ -8,15 +9,13 @@ import '../widgets.dart';
 const String PATH = 'assets/data/dictionary.json';
 
 class HomePage extends StatelessWidget {
-  HomePage({super.key}) {
-    GetIt.I<DictionaryCubit>().initialize(PATH);
-  }
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     final DictionaryCubit dictionaryCubit = GetIt.I<DictionaryCubit>();
-    return BlocProvider.value(
-      value: dictionaryCubit,
+    return BlocProvider(
+      create: (context) => dictionaryCubit..initialize(PATH),
       child: BlocBuilder<DictionaryCubit, DictionaryState>(
         builder: (context, state) => _HomePageView(state: state),
       ),
