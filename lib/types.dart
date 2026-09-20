@@ -1,1 +1,1 @@
-typedef Dictionary = Map<String, Set<String>>;
+export 'types/dictionary.dart';

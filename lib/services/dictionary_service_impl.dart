@@ -17,7 +17,7 @@ class DictionaryServiceImpl extends DictionaryService {
 
   @override
   Iterable<String> getAllWords() sync* {
-    for (final Set<String> list in _dictionary.values) {
+    for (final Set<String> list in _dictionary.data.values) {
       for (final word in list) {
         yield word;
       }
@@ -27,8 +27,8 @@ class DictionaryServiceImpl extends DictionaryService {
   @override
   Iterable<String> getAnagrams(String text) sync* {
     final String key = _alphabetize(text);
-    if (_dictionary.containsKey(key)) {
-      for (final String word in _dictionary[key]!) {
+    if (_dictionary.data.containsKey(key)) {
+      for (final String word in _dictionary.data[key]!) {
         yield word;
       }
     }
