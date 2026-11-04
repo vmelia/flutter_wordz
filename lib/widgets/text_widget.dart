@@ -17,11 +17,7 @@ class TextWidget extends StatelessWidget {
     return Container(
       padding: componentPadding,
       color: backgroundColour,
-      child: Text(
-        text,
-        style: themeTextStyle,
-        textAlign: textAlign,
-      ),
+      child: Text(text, style: defaultTextStyle, textAlign: textAlign),
     );
   }
 }

@@ -16,12 +16,6 @@ final Color panelBorderColour = Colors.grey[500]!;
 const EdgeInsets componentPadding = EdgeInsets.all(6.0);
 const Color iconColour = Colors.blue;
 
-const String _fontFamily = 'Calibri';
-const double _fontSize = 24.0;
-const Color _textColour = Colors.white;
-
-const TextStyle themeTextStyle = TextStyle(
-  fontFamily: _fontFamily,
-  fontSize: _fontSize,
-  color: _textColour,
-);
+const String fontFamily = 'Calibri';
+const double fontSize = 24.0;
+const Color textColour = Colors.white;
