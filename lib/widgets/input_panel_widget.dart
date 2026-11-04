@@ -8,48 +8,30 @@ class InputPanelWidget extends StatelessWidget {
   const InputPanelWidget({super.key});
 
   @override
+  Widget build(BuildContext context) => ShadowContainerWidget(child: _InputPanelWidgetView());
+}
+
+class _InputPanelWidgetView extends StatelessWidget {
+  @override
   Widget build(BuildContext context) {
     final DictionaryCubit dictionaryCubit = GetIt.I<DictionaryCubit>();
-    return Container(
-      decoration: BoxDecoration(
-        border: Border.all(color: panelBorderColour),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withValues(alpha: 0.3),
-            spreadRadius: 6,
-            blurRadius: 6,
-            offset: const Offset(8, 8),
-          ),
-        ],
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          TextWidget(
-            text: 'Text',
-            backgroundColour: panelHeaderColour,
-            textAlign: TextAlign.center,
-          ),
-          TextFieldWidget(
-            onChanged: (value) => dictionaryCubit.setInput(value),
-            backgroundColour: panelBodyColour,
-            textAlign: TextAlign.left,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              ButtonWidget(
-                iconData: Icons.search,
-                onPressed: () => dictionaryCubit.getAnagrams(),
-              ),
-              ButtonWidget(
-                iconData: Icons.pattern,
-                onPressed: () => dictionaryCubit.getMatches(),
-              ),
-            ],
-          ),
-        ],
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        TextWidget(text: 'Text', backgroundColour: panelHeaderColour, textAlign: TextAlign.center),
+        TextFieldWidget(
+          onChanged: (value) => dictionaryCubit.setInput(value),
+          backgroundColour: panelBodyColour,
+          textAlign: TextAlign.left,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            ButtonWidget(iconData: Icons.search, onPressed: () => dictionaryCubit.getAnagrams()),
+            ButtonWidget(iconData: Icons.pattern, onPressed: () => dictionaryCubit.getMatches()),
+          ],
+        ),
+      ],
     );
   }
 }

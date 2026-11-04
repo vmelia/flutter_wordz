@@ -10,9 +10,8 @@ class OutputPanelWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<DictionaryCubit, DictionaryState>(
-      builder: (context, state) {
-        return _OutputPanelWidgetView(state: state);
-      },
+      builder: (context, state) =>
+          ShadowContainerWidget(child: _OutputPanelWidgetView(state: state)),
     );
   }
 }
@@ -23,29 +22,16 @@ class _OutputPanelWidgetView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        border: Border.all(color: panelBorderColour),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withValues(alpha: 0.3),
-            spreadRadius: 6,
-            blurRadius: 6,
-            offset: const Offset(8, 8),
-          ),
-        ],
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          TextWidget(
-            text: 'Results',
-            backgroundColour: panelHeaderColour,
-            textAlign: TextAlign.center,
-          ),
-          Expanded(child: ListWidget(items: state.output)),
-        ],
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        TextWidget(
+          text: 'Results',
+          backgroundColour: panelHeaderColour,
+          textAlign: TextAlign.center,
+        ),
+        Expanded(child: ListWidget(items: state.output)),
+      ],
     );
   }
 }
