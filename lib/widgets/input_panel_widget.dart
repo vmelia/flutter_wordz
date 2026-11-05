@@ -18,7 +18,7 @@ class _InputPanelWidgetView extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        TextWidget(text: 'Text', backgroundColour: panelHeaderColour, textAlign: TextAlign.center),
+        TextWidget(text: 'Text', style: panelHeaderTextWidgetStyle),
         TextFieldWidget(
           onChanged: (value) => dictionaryCubit.setInput(value),
           backgroundColour: panelBodyColour,

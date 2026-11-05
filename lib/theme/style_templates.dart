@@ -1,11 +1,32 @@
-// import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
-// class TextWidgetStyle {
-//   const TextWidgetStyle({required this.textStyle, required this.padding, required this.colour});
-//   final TextStyle textStyle;
-//   final EdgeInsets padding;
-//   final Color colour;
-// }
+class TextWidgetStyle {
+  const TextWidgetStyle({
+    required this.textStyle,
+    required this.padding,
+    required this.textAlign,
+    required this.backgroundColour,
+  });
+
+  TextWidgetStyle copyWith({
+    TextStyle? textStyle,
+    EdgeInsets? padding,
+    TextAlign? textAlign,
+    Color? backgroundColour,
+  }) {
+    return TextWidgetStyle(
+      textStyle: textStyle ?? this.textStyle,
+      padding: padding ?? this.padding,
+      textAlign: textAlign ?? this.textAlign,
+      backgroundColour: backgroundColour ?? this.backgroundColour,
+    );
+  }
+
+  final TextStyle textStyle;
+  final EdgeInsets padding;
+  final TextAlign textAlign;
+  final Color backgroundColour;
+}
 
 // class TextFieldStyle {
 //   const TextFieldStyle({

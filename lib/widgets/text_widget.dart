@@ -1,23 +1,18 @@
 import 'package:flutter/material.dart';
+
 import '../theme.dart';
 
 class TextWidget extends StatelessWidget {
-  const TextWidget({
-    super.key,
-    required this.text,
-    required this.backgroundColour,
-    required this.textAlign,
-  });
+  const TextWidget({super.key, required this.style, required this.text});
+  final TextWidgetStyle style;
   final String text;
-  final Color backgroundColour;
-  final TextAlign textAlign;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: componentPadding,
-      color: backgroundColour,
-      child: Text(text, style: defaultTextStyle, textAlign: textAlign),
+      color: style.backgroundColour,
+      child: Text(text, style: style.textStyle, textAlign: style.textAlign),
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import '../state.dart';
 import '../theme.dart';
 import '../widgets.dart';
@@ -25,11 +26,7 @@ class _OutputPanelWidgetView extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        TextWidget(
-          text: 'Results',
-          backgroundColour: panelHeaderColour,
-          textAlign: TextAlign.center,
-        ),
+        TextWidget(text: 'Results', style: panelHeaderTextWidgetStyle),
         Expanded(child: ListWidget(items: state.output)),
       ],
     );
