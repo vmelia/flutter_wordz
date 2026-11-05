@@ -7,7 +7,7 @@ const String _fontFamily = 'Calibri';
 const double _fontSize = 24.0;
 
 // Colours
-final Color mainBackgroundColour = Colors.grey[700]!;
+final Color _mainBackgroundColour = Colors.grey[700]!;
 final Color _panelHeaderColour = Colors.grey[800]!;
 final Color _panelBodyColour = Colors.grey[850]!;
 final Color panelBorderColour = Colors.grey[500]!;
@@ -17,7 +17,7 @@ const Color _iconColour = Colors.blue;
 // Padding
 const double _horizontalPanelSpacing = 24.0;
 const double _verticalPanelSpacing = 8.0;
-const EdgeInsets containerPadding = EdgeInsets.symmetric(
+const EdgeInsets _containerPadding = EdgeInsets.symmetric(
   vertical: _verticalPanelSpacing,
   horizontal: _horizontalPanelSpacing,
 );
@@ -26,6 +26,10 @@ const EdgeInsets _componentPadding = EdgeInsets.all(6.0);
 const EdgeInsets _listPadding = EdgeInsets.all(12.0);
 
 // Styles
+final AppStyle defaultAppStyle = AppStyle(colour: _mainBackgroundColour);
+
+const PageStyle defaultPageStyle = PageStyle(padding: _containerPadding);
+
 const TextStyle defaultTextStyle = TextStyle(
   fontFamily: _fontFamily,
   fontSize: _fontSize,

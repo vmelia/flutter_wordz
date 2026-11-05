@@ -31,9 +31,9 @@ class _HomePageView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(padding: containerPadding, child: const InputPanelWidget()),
+        Container(padding: defaultPageStyle.padding, child: const InputPanelWidget()),
         Flexible(
-          child: Container(padding: containerPadding, child: const OutputPanelWidget()),
+          child: Container(padding: defaultPageStyle.padding, child: const OutputPanelWidget()),
         ),
       ],
     );

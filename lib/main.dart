@@ -22,7 +22,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) => MaterialApp(
     debugShowCheckedModeBanner: false,
-    theme: ThemeData(scaffoldBackgroundColor: mainBackgroundColour),
+    theme: ThemeData(scaffoldBackgroundColor: defaultAppStyle.colour),
     home: const MainScaffoldWidget(),
   );
 }
@@ -34,7 +34,7 @@ class MainScaffoldWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: mainBackgroundColour,
+        backgroundColor: defaultAppStyle.colour,
         title: const Center(
           child: Text('Anagram Finder', style: defaultTextStyle),
         ),

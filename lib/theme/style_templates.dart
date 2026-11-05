@@ -1,5 +1,15 @@
 import 'package:flutter/material.dart';
 
+class AppStyle {
+  const AppStyle({required this.colour});
+  final Color colour;
+}
+
+class PageStyle {
+  const PageStyle({required this.padding});
+  final EdgeInsets padding;
+}
+
 class TextWidgetStyle {
   const TextWidgetStyle({
     required this.textStyle,
