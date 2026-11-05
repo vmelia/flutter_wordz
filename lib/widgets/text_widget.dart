@@ -10,7 +10,7 @@ class TextWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: componentPadding,
+      padding: style.padding,
       color: style.backgroundColour,
       child: Text(text, style: style.textStyle, textAlign: style.textAlign),
     );

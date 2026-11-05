@@ -8,8 +8,8 @@ const double _fontSize = 24.0;
 
 // Colours
 final Color mainBackgroundColour = Colors.grey[700]!;
-final Color panelHeaderColour = Colors.grey[800]!;
-final Color panelBodyColour = Colors.grey[850]!;
+final Color _panelHeaderColour = Colors.grey[800]!;
+final Color _panelBodyColour = Colors.grey[850]!;
 final Color panelBorderColour = Colors.grey[500]!;
 const Color _textColour = Colors.white;
 const Color _iconColour = Colors.blue;
@@ -22,9 +22,8 @@ const EdgeInsets containerPadding = EdgeInsets.symmetric(
   horizontal: _horizontalPanelSpacing,
 );
 
-const EdgeInsets panelPadding = EdgeInsets.all(8.0);
-const EdgeInsets componentPadding = EdgeInsets.all(6.0);
-const EdgeInsets listPadding = EdgeInsets.all(12.0);
+const EdgeInsets _componentPadding = EdgeInsets.all(6.0);
+const EdgeInsets _listPadding = EdgeInsets.all(12.0);
 
 // Styles
 const TextStyle defaultTextStyle = TextStyle(
@@ -35,38 +34,38 @@ const TextStyle defaultTextStyle = TextStyle(
 
 const TextWidgetStyle _defaultTextWidgetStyle = TextWidgetStyle(
   textStyle: defaultTextStyle,
-  padding: componentPadding,
+  padding: _componentPadding,
   textAlign: TextAlign.left,
   backgroundColour: Colors.white,
 );
 
 final TextWidgetStyle panelHeaderTextWidgetStyle = _defaultTextWidgetStyle.copyWith(
   textAlign: TextAlign.center,
-  backgroundColour: panelHeaderColour,
+  backgroundColour: _panelHeaderColour,
 );
 
 final TextWidgetStyle panelBodyTextWidgetStyle = _defaultTextWidgetStyle.copyWith(
-  backgroundColour: panelBodyColour,
+  backgroundColour: _panelBodyColour,
 );
 
 final ButtonWidgetStyle defaultButtonWidgetStyle = ButtonWidgetStyle(
   height: 50,
-  padding: componentPadding,
-  colour: panelHeaderColour,
-  backgroundColour: panelBodyColour,
+  padding: _componentPadding,
+  colour: _panelHeaderColour,
+  backgroundColour: _panelBodyColour,
   iconColour: _iconColour,
 );
 
 final ListWidgetStyle defaultListWidgetStyle = ListWidgetStyle(
   textWidgetStyle: panelBodyTextWidgetStyle,
-  padding: listPadding,
+  padding: _listPadding,
 );
 
 final TextFieldWidgetStyle defaultTextFieldWidgetStyle = TextFieldWidgetStyle(
   textStyle: defaultTextStyle,
-  padding: componentPadding,
+  padding: _componentPadding,
   textAlign: TextAlign.left,
-  colour: panelBodyColour,
+  colour: _panelBodyColour,
 );
 
 final defaultShadowContainerWidgetStyle = ShadowContainerWidgetStyle(
