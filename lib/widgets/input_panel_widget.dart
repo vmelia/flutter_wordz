@@ -20,7 +20,7 @@ class _InputPanelWidgetView extends StatelessWidget {
       children: [
         TextWidget(text: 'Text', style: panelHeaderTextWidgetStyle),
         TextFieldWidget(
-          textFieldWidgetStyle: defaultTextFieldWidgetStyle,
+          style: defaultTextFieldWidgetStyle,
           onChanged: (value) => dictionaryCubit.setInput(value),
         ),
         Row(

@@ -4,21 +4,21 @@ import '../theme.dart';
 class TextFieldWidget extends StatelessWidget {
   const TextFieldWidget({
     super.key,
-    required this.textFieldWidgetStyle,
+    required this.style,
     required this.onChanged,
   });
-  final TextFieldWidgetStyle textFieldWidgetStyle;
+  final TextFieldWidgetStyle style;
   final ValueChanged<String>? onChanged;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: textFieldWidgetStyle.padding,
-      color: textFieldWidgetStyle.colour,
+      padding: style.padding,
+      color: style.colour,
       child: TextField(
         onChanged: onChanged,
-        style: textFieldWidgetStyle.textFieldStyle.textStyle,
-        textAlign: textFieldWidgetStyle.textAlign,
+        style: style.textFieldStyle.textStyle,
+        textAlign: style.textAlign,
       ),
     );
   }
