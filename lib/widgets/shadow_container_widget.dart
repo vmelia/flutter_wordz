@@ -3,21 +3,22 @@ import 'package:flutter/material.dart';
 import '../theme.dart';
 
 class ShadowContainerWidget extends StatelessWidget {
-  const ShadowContainerWidget({super.key, required this.child});
+  const ShadowContainerWidget({super.key, required this.style, required this.child});
+  final ShadowContainerWidgetStyle style;
   final Widget child;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        border: Border.all(color: panelBorderColour),
-        borderRadius: BorderRadius.circular(4),
+        border: Border.all(color: style.borderColour),
+        borderRadius: style.borderRadius,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.3),
-            spreadRadius: 6,
-            blurRadius: 6,
-            offset: const Offset(6, 6),
+            color: style.shadowColour,
+            spreadRadius: style.spreadRadius,
+            blurRadius: style.blurRadius,
+            offset: style.offset,
           ),
         ],
       ),

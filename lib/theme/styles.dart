@@ -68,3 +68,12 @@ final TextFieldWidgetStyle defaultTextFieldWidgetStyle = TextFieldWidgetStyle(
   textAlign: TextAlign.left,
   colour: panelBodyColour,
 );
+
+final defaultShadowContainerWidgetStyle = ShadowContainerWidgetStyle(
+  borderColour: panelBorderColour,
+  borderRadius: BorderRadius.circular(4),
+  shadowColour: Colors.black.withOpacity(0.3),
+  spreadRadius: 6,
+  blurRadius: 6,
+  offset: const Offset(6, 6),
+);

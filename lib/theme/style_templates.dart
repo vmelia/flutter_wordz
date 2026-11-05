@@ -62,13 +62,20 @@ class TextFieldWidgetStyle {
   final Color colour;
 }
 
-// class ShadowContainerWidgetStyle {
-//   const ShadowContainerStyle({
-//     required this.borderColour,
-//     required this.borderRadius,
-//     required this.boxShadow,
-//   });
-//   final Color borderColour;
-//   final double borderRadius;
-//   final List<BoxShadow> boxShadow;
-// }
+class ShadowContainerWidgetStyle {
+  const ShadowContainerWidgetStyle({
+    required this.borderColour,
+    required this.borderRadius,
+    required this.shadowColour,
+    required this.spreadRadius,
+    required this.blurRadius,
+    required this.offset,
+  });
+
+  final Color borderColour;
+  final BorderRadius borderRadius;
+  final Color shadowColour;
+  final double spreadRadius;
+  final double blurRadius;
+  final Offset offset;
+}

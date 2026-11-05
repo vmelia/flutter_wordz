@@ -11,8 +11,10 @@ class OutputPanelWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<DictionaryCubit, DictionaryState>(
-      builder: (context, state) =>
-          ShadowContainerWidget(child: _OutputPanelWidgetView(state: state)),
+      builder: (context, state) => ShadowContainerWidget(
+        style: defaultShadowContainerWidgetStyle,
+        child: _OutputPanelWidgetView(state: state),
+      ),
     );
   }
 }

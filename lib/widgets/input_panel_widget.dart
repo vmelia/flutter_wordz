@@ -9,7 +9,10 @@ class InputPanelWidget extends StatelessWidget {
   const InputPanelWidget({super.key});
 
   @override
-  Widget build(BuildContext context) => ShadowContainerWidget(child: _InputPanelWidgetView());
+  Widget build(BuildContext context) => ShadowContainerWidget(
+    style: defaultShadowContainerWidgetStyle,
+    child: _InputPanelWidgetView(),
+  );
 }
 
 class _InputPanelWidgetView extends StatelessWidget {
