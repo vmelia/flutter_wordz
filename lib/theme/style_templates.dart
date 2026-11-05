@@ -50,18 +50,20 @@ class TextWidgetStyle {
 //   final Color backgroundColour;
 // }
 
-// class ButtonWidgetStyle {
-//   const ButtonWidgetStyle({
-//     required this.height,
-//     required this.colour,
-//     required this.backgroundColour,
-//     required this.iconColour,
-//   });
-//   final double height;
-//   final Color colour;
-//   final Color backgroundColour;
-//   final Color iconColour;
-// }
+class ButtonWidgetStyle {
+  const ButtonWidgetStyle({
+    required this.height,
+    required this.padding,
+    required this.colour,
+    required this.backgroundColour,
+    required this.iconColour,
+  });
+  final double height;
+  final EdgeInsets padding;
+  final Color colour;
+  final Color backgroundColour;
+  final Color iconColour;
+}
 
 // class ListWidgetStyle {
 //   const ListWidgetStyle({

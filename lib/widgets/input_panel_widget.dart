@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
+
 import '../state.dart';
 import '../theme.dart';
 import '../widgets.dart';
@@ -27,8 +28,16 @@ class _InputPanelWidgetView extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            ButtonWidget(iconData: Icons.search, onPressed: () => dictionaryCubit.getAnagrams()),
-            ButtonWidget(iconData: Icons.pattern, onPressed: () => dictionaryCubit.getMatches()),
+            ButtonWidget(
+              style: defaultButtonWidgetStyle,
+              iconData: Icons.search,
+              onPressed: () => dictionaryCubit.getAnagrams(),
+            ),
+            ButtonWidget(
+              style: defaultButtonWidgetStyle,
+              iconData: Icons.pattern,
+              onPressed: () => dictionaryCubit.getMatches(),
+            ),
           ],
         ),
       ],

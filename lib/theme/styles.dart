@@ -24,12 +24,13 @@ final TextWidgetStyle panelBodyTextWidgetStyle = _defaultTextWidgetStyle.copyWit
   backgroundColour: panelBodyColour,
 );
 
-// final ButtonWidgetStyle defaultButtonWidgetStyle = ButtonWidgetStyle(
-//   height: 50,
-//   colour: panelHeaderColour,
-//   backgroundColour: panelBodyColour,
-//   iconColour: iconColour,
-// );
+final ButtonWidgetStyle defaultButtonWidgetStyle = ButtonWidgetStyle(
+  height: 50,
+  padding: componentPadding,
+  colour: panelHeaderColour,
+  backgroundColour: panelBodyColour,
+  iconColour: iconColour,
+);
 
 // final ListWidgetStyle defaultListWidgetStyle = ListWidgetStyle(
 //   textWidgetStyle: defaultTextWidgetStyle,
