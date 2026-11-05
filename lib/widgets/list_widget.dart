@@ -4,13 +4,14 @@ import '../theme.dart';
 import '../widgets.dart';
 
 class ListWidget extends StatelessWidget {
-  const ListWidget({super.key, required this.items});
+  const ListWidget({super.key, required this.listWidgetStyle, required this.items});
+  final ListWidgetStyle listWidgetStyle;
   final Iterable<String> items;
 
   @override
   Widget build(BuildContext context) =>
-      ListView(padding: const EdgeInsets.all(12), children: _buildList(items));
-}
+      ListView(padding: listWidgetStyle.padding, children: _buildList(items));
 
-List<Widget> _buildList(Iterable<String> output) =>
-    output.map((s) => TextWidget(text: s, style: panelBodyTextWidgetStyle)).toList();
+  List<Widget> _buildList(Iterable<String> output) =>
+      output.map((s) => TextWidget(text: s, style: listWidgetStyle.textWidgetStyle)).toList();
+}

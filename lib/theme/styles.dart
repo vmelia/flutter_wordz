@@ -1,11 +1,35 @@
 import 'package:flutter/material.dart';
-
 import '../theme.dart';
 
+// Text
+const String _fontFamily = 'Calibri';
+const double _fontSize = 24.0;
+
+// Colours
+final Color mainBackgroundColour = Colors.grey[700]!;
+final Color _panelHeaderColour = Colors.grey[800]!;
+final Color panelBodyColour = Colors.grey[850]!;
+final Color panelBorderColour = Colors.grey[500]!;
+const Color _textColour = Colors.white;
+const Color _iconColour = Colors.blue;
+
+// Padding
+const double _horizontalPanelSpacing = 24.0;
+const double _verticalPanelSpacing = 8.0;
+const EdgeInsets containerPadding = EdgeInsets.symmetric(
+  vertical: _verticalPanelSpacing,
+  horizontal: _horizontalPanelSpacing,
+);
+
+const EdgeInsets panelPadding = EdgeInsets.all(8.0);
+const EdgeInsets componentPadding = EdgeInsets.all(6.0);
+const EdgeInsets listPadding = EdgeInsets.all(12.0);
+
+// Styles
 const TextStyle defaultTextStyle = TextStyle(
-  fontFamily: fontFamily,
-  fontSize: fontSize,
-  color: textColour,
+  fontFamily: _fontFamily,
+  fontSize: _fontSize,
+  color: _textColour,
 );
 
 const TextWidgetStyle _defaultTextWidgetStyle = TextWidgetStyle(
@@ -17,7 +41,7 @@ const TextWidgetStyle _defaultTextWidgetStyle = TextWidgetStyle(
 
 final TextWidgetStyle panelHeaderTextWidgetStyle = _defaultTextWidgetStyle.copyWith(
   textAlign: TextAlign.center,
-  backgroundColour: panelHeaderColour,
+  backgroundColour: _panelHeaderColour,
 );
 
 final TextWidgetStyle panelBodyTextWidgetStyle = _defaultTextWidgetStyle.copyWith(
@@ -27,13 +51,12 @@ final TextWidgetStyle panelBodyTextWidgetStyle = _defaultTextWidgetStyle.copyWit
 final ButtonWidgetStyle defaultButtonWidgetStyle = ButtonWidgetStyle(
   height: 50,
   padding: componentPadding,
-  colour: panelHeaderColour,
+  colour: _panelHeaderColour,
   backgroundColour: panelBodyColour,
-  iconColour: iconColour,
+  iconColour: _iconColour,
 );
 
-// final ListWidgetStyle defaultListWidgetStyle = ListWidgetStyle(
-//   textWidgetStyle: defaultTextWidgetStyle,
-//   padding: const EdgeInsets.all(12),
-//   backgroundColour: panelBodyColour,
-// );
+final ListWidgetStyle defaultListWidgetStyle = ListWidgetStyle(
+  textWidgetStyle: panelBodyTextWidgetStyle,
+  padding: listPadding,
+);

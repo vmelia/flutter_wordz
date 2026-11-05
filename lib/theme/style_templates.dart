@@ -21,7 +21,6 @@ class TextWidgetStyle {
       backgroundColour: backgroundColour ?? this.backgroundColour,
     );
   }
-
   final TextStyle textStyle;
   final EdgeInsets padding;
   final TextAlign textAlign;
@@ -65,15 +64,11 @@ class ButtonWidgetStyle {
   final Color iconColour;
 }
 
-// class ListWidgetStyle {
-//   const ListWidgetStyle({
-//     required this.textWidgetStyle,
-//     required this.padding,
-//     required this.colour,
-//     required this.backgroundColour,
-//   });
-//   final TextWidgetStyle textWidgetStyle;
-//   final EdgeInsets padding;
-//   final Color colour;
-//   final Color backgroundColour;
-// }
+class ListWidgetStyle {
+  const ListWidgetStyle({
+    required this.textWidgetStyle,
+    required this.padding,
+  });
+  final TextWidgetStyle textWidgetStyle;
+  final EdgeInsets padding;
+}

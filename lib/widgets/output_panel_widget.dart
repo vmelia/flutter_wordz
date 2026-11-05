@@ -27,7 +27,9 @@ class _OutputPanelWidgetView extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         TextWidget(text: 'Results', style: panelHeaderTextWidgetStyle),
-        Expanded(child: ListWidget(items: state.output)),
+        Expanded(
+          child: ListWidget(listWidgetStyle: defaultListWidgetStyle, items: state.output),
+        ),
       ],
     );
   }
