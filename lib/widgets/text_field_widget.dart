@@ -12,7 +12,7 @@ class TextFieldWidget extends StatelessWidget {
     return Container(
       padding: style.padding,
       color: style.colour,
-      child: TextField(onChanged: onChanged, style: defaultTextStyle, textAlign: style.textAlign),
+      child: TextField(onChanged: onChanged, style: style.textStyle, textAlign: style.textAlign),
     );
   }
 }

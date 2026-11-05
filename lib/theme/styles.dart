@@ -63,6 +63,7 @@ final ListWidgetStyle defaultListWidgetStyle = ListWidgetStyle(
 );
 
 final TextFieldWidgetStyle defaultTextFieldWidgetStyle = TextFieldWidgetStyle(
+  textStyle: defaultTextStyle,
   padding: componentPadding,
   textAlign: TextAlign.left,
   colour: panelBodyColour,

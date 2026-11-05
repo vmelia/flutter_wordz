@@ -51,10 +51,12 @@ class ListWidgetStyle {
 
 class TextFieldWidgetStyle {
   const TextFieldWidgetStyle({
+    required this.textStyle,
     required this.padding,
     required this.textAlign,
     required this.colour,
   });
+  final TextStyle textStyle;
   final EdgeInsets padding;
   final TextAlign textAlign;
   final Color colour;
