@@ -49,22 +49,24 @@ class ListWidgetStyle {
   final EdgeInsets padding;
 }
 
-class TextFieldStyle {
-  const TextFieldStyle({required this.textStyle, required this.textAlign, required this.colour});
-  final TextStyle textStyle;
-  final TextAlign textAlign;
-  final Color colour;
-}
-
 class TextFieldWidgetStyle {
   const TextFieldWidgetStyle({
-    required this.textFieldStyle,
     required this.padding,
     required this.textAlign,
     required this.colour,
   });
-  final TextFieldStyle textFieldStyle;
   final EdgeInsets padding;
   final TextAlign textAlign;
   final Color colour;
 }
+
+// class ShadowContainerWidgetStyle {
+//   const ShadowContainerStyle({
+//     required this.borderColour,
+//     required this.borderRadius,
+//     required this.boxShadow,
+//   });
+//   final Color borderColour;
+//   final double borderRadius;
+//   final List<BoxShadow> boxShadow;
+// }

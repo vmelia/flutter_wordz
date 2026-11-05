@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
+
 import '../theme.dart';
 
 class TextFieldWidget extends StatelessWidget {
-  const TextFieldWidget({
-    super.key,
-    required this.style,
-    required this.onChanged,
-  });
+  const TextFieldWidget({super.key, required this.style, required this.onChanged});
   final TextFieldWidgetStyle style;
   final ValueChanged<String>? onChanged;
 
@@ -15,11 +12,7 @@ class TextFieldWidget extends StatelessWidget {
     return Container(
       padding: style.padding,
       color: style.colour,
-      child: TextField(
-        onChanged: onChanged,
-        style: style.textFieldStyle.textStyle,
-        textAlign: style.textAlign,
-      ),
+      child: TextField(onChanged: onChanged, style: defaultTextStyle, textAlign: style.textAlign),
     );
   }
 }
