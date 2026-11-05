@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../theme.dart';
 
 // Text
@@ -7,7 +8,7 @@ const double _fontSize = 24.0;
 
 // Colours
 final Color mainBackgroundColour = Colors.grey[700]!;
-final Color _panelHeaderColour = Colors.grey[800]!;
+final Color panelHeaderColour = Colors.grey[800]!;
 final Color panelBodyColour = Colors.grey[850]!;
 final Color panelBorderColour = Colors.grey[500]!;
 const Color _textColour = Colors.white;
@@ -41,7 +42,7 @@ const TextWidgetStyle _defaultTextWidgetStyle = TextWidgetStyle(
 
 final TextWidgetStyle panelHeaderTextWidgetStyle = _defaultTextWidgetStyle.copyWith(
   textAlign: TextAlign.center,
-  backgroundColour: _panelHeaderColour,
+  backgroundColour: panelHeaderColour,
 );
 
 final TextWidgetStyle panelBodyTextWidgetStyle = _defaultTextWidgetStyle.copyWith(
@@ -51,7 +52,7 @@ final TextWidgetStyle panelBodyTextWidgetStyle = _defaultTextWidgetStyle.copyWit
 final ButtonWidgetStyle defaultButtonWidgetStyle = ButtonWidgetStyle(
   height: 50,
   padding: componentPadding,
-  colour: _panelHeaderColour,
+  colour: panelHeaderColour,
   backgroundColour: panelBodyColour,
   iconColour: _iconColour,
 );
@@ -59,4 +60,17 @@ final ButtonWidgetStyle defaultButtonWidgetStyle = ButtonWidgetStyle(
 final ListWidgetStyle defaultListWidgetStyle = ListWidgetStyle(
   textWidgetStyle: panelBodyTextWidgetStyle,
   padding: listPadding,
+);
+
+const TextFieldStyle defaultTextFieldStyle = TextFieldStyle(
+  textStyle: defaultTextStyle,
+  textAlign: TextAlign.left,
+  colour: _textColour,
+);
+
+final TextFieldWidgetStyle defaultTextFieldWidgetStyle = TextFieldWidgetStyle(
+  textFieldStyle: defaultTextFieldStyle,
+  padding: componentPadding,
+  textAlign: TextAlign.left,
+  colour: panelBodyColour,
 );

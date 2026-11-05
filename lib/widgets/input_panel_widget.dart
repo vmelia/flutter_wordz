@@ -20,9 +20,8 @@ class _InputPanelWidgetView extends StatelessWidget {
       children: [
         TextWidget(text: 'Text', style: panelHeaderTextWidgetStyle),
         TextFieldWidget(
+          textFieldWidgetStyle: defaultTextFieldWidgetStyle,
           onChanged: (value) => dictionaryCubit.setInput(value),
-          backgroundColour: panelBodyColour,
-          textAlign: TextAlign.left,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.end,

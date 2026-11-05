@@ -21,33 +21,12 @@ class TextWidgetStyle {
       backgroundColour: backgroundColour ?? this.backgroundColour,
     );
   }
+
   final TextStyle textStyle;
   final EdgeInsets padding;
   final TextAlign textAlign;
   final Color backgroundColour;
 }
-
-// class TextFieldStyle {
-//   const TextFieldStyle({
-//     required this.textStyle,
-//     required this.textAlign,
-//     required this.backgroundColour,
-//   });
-//   final TextStyle textStyle;
-//   final TextAlign textAlign;
-//   final Color backgroundColour;
-// }
-
-// class TextFieldWidgetStyle {
-//   const TextFieldWidgetStyle({
-//     required this.textFieldStyle,
-//     required this.textAlign,
-//     required this.backgroundColour,
-//   });
-//   final TextFieldStyle textFieldStyle;
-//   final TextAlign textAlign;
-//   final Color backgroundColour;
-// }
 
 class ButtonWidgetStyle {
   const ButtonWidgetStyle({
@@ -65,10 +44,27 @@ class ButtonWidgetStyle {
 }
 
 class ListWidgetStyle {
-  const ListWidgetStyle({
-    required this.textWidgetStyle,
-    required this.padding,
-  });
+  const ListWidgetStyle({required this.textWidgetStyle, required this.padding});
   final TextWidgetStyle textWidgetStyle;
   final EdgeInsets padding;
+}
+
+class TextFieldStyle {
+  const TextFieldStyle({required this.textStyle, required this.textAlign, required this.colour});
+  final TextStyle textStyle;
+  final TextAlign textAlign;
+  final Color colour;
+}
+
+class TextFieldWidgetStyle {
+  const TextFieldWidgetStyle({
+    required this.textFieldStyle,
+    required this.padding,
+    required this.textAlign,
+    required this.colour,
+  });
+  final TextFieldStyle textFieldStyle;
+  final EdgeInsets padding;
+  final TextAlign textAlign;
+  final Color colour;
 }

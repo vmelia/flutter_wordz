@@ -28,7 +28,7 @@ class _OutputPanelWidgetView extends StatelessWidget {
       children: [
         TextWidget(text: 'Results', style: panelHeaderTextWidgetStyle),
         Expanded(
-          child: ListWidget(listWidgetStyle: defaultListWidgetStyle, items: state.output),
+          child: ListWidget(style: defaultListWidgetStyle, items: state.output),
         ),
       ],
     );
