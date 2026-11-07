@@ -1,75 +1,53 @@
 import 'package:flutter/material.dart';
 
 import '../theme.dart';
-
-// Text
-const String _fontFamily = 'Calibri';
-const double _fontSize = 24.0;
-
-// Colours
-final Color _mainBackgroundColour = Colors.grey[700]!;
-final Color _panelHeaderColour = Colors.grey[800]!;
-final Color _panelBodyColour = Colors.grey[850]!;
-final Color panelBorderColour = Colors.grey[500]!;
-const Color _textColour = Colors.white;
-const Color _iconColour = Colors.blue;
-
-// Padding
-const double _horizontalPanelSpacing = 24.0;
-const double _verticalPanelSpacing = 8.0;
-const EdgeInsets _containerPadding = EdgeInsets.symmetric(
-  vertical: _verticalPanelSpacing,
-  horizontal: _horizontalPanelSpacing,
-);
-
-const EdgeInsets _componentPadding = EdgeInsets.all(6.0);
-const EdgeInsets _listPadding = EdgeInsets.all(12.0);
+import 'style_constants.dart';
 
 // Styles
-final AppStyle defaultAppStyle = AppStyle(colour: _mainBackgroundColour);
+final AppStyle defaultAppStyle = AppStyle(colour: mainBackgroundColour);
 
-const PageStyle defaultPageStyle = PageStyle(padding: _containerPadding);
+const PageStyle defaultPageStyle = PageStyle(padding: containerPadding);
 
 const TextStyle defaultTextStyle = TextStyle(
-  fontFamily: _fontFamily,
-  fontSize: _fontSize,
-  color: _textColour,
+  fontFamily: fontFamily,
+  fontSize: fontSize,
+  color: textColour,
 );
 
-const TextWidgetStyle _defaultTextWidgetStyle = TextWidgetStyle(
+const TextWidgetStyle defaultTextWidgetStyle = TextWidgetStyle(
   textStyle: defaultTextStyle,
-  padding: _componentPadding,
+  padding: componentPadding,
   textAlign: TextAlign.left,
   backgroundColour: Colors.white,
 );
 
-final TextWidgetStyle panelHeaderTextWidgetStyle = _defaultTextWidgetStyle.copyWith(
+final TextWidgetStyle panelHeaderTextWidgetStyle = defaultTextWidgetStyle.copyWith(
   textAlign: TextAlign.center,
-  backgroundColour: _panelHeaderColour,
+  backgroundColour:panelHeaderColour,
 );
 
-final TextWidgetStyle panelBodyTextWidgetStyle = _defaultTextWidgetStyle.copyWith(
-  backgroundColour: _panelBodyColour,
+final TextWidgetStyle panelBodyTextWidgetStyle = defaultTextWidgetStyle.copyWith(
+  backgroundColour: panelBodyColour,
 );
 
 final ButtonWidgetStyle defaultButtonWidgetStyle = ButtonWidgetStyle(
   height: 50,
-  padding: _componentPadding,
-  colour: _panelHeaderColour,
-  backgroundColour: _panelBodyColour,
-  iconColour: _iconColour,
+  padding: componentPadding,
+  colour: panelHeaderColour,
+  backgroundColour: panelBodyColour,
+  iconColour: iconColour,
 );
 
 final ListWidgetStyle defaultListWidgetStyle = ListWidgetStyle(
   textWidgetStyle: panelBodyTextWidgetStyle,
-  padding: _listPadding,
+  padding: listPadding,
 );
 
 final TextFieldWidgetStyle defaultTextFieldWidgetStyle = TextFieldWidgetStyle(
   textStyle: defaultTextStyle,
-  padding: _componentPadding,
+  padding: componentPadding,
   textAlign: TextAlign.left,
-  colour: _panelBodyColour,
+  colour: panelBodyColour,
 );
 
 final defaultShadowContainerWidgetStyle = ShadowContainerWidgetStyle(
