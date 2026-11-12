@@ -23,7 +23,7 @@ const TextWidgetStyle defaultTextWidgetStyle = TextWidgetStyle(
 
 final TextWidgetStyle panelHeaderTextWidgetStyle = defaultTextWidgetStyle.copyWith(
   textAlign: TextAlign.center,
-  backgroundColour:panelHeaderColour,
+  backgroundColour: panelHeaderColour,
 );
 
 final TextWidgetStyle panelBodyTextWidgetStyle = defaultTextWidgetStyle.copyWith(

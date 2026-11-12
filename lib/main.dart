@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
+
 import 'interfaces.dart';
 import 'pages.dart';
 import 'services.dart';
@@ -35,9 +36,7 @@ class MainScaffoldWidget extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: defaultAppStyle.colour,
-        title: const Center(
-          child: Text('Anagram Finder', style: defaultTextStyle),
-        ),
+        title: const Center(child: Text('Anagram Finder', style: defaultTextStyle)),
         elevation: 0,
       ),
       body: const SafeArea(child: HomePage()),

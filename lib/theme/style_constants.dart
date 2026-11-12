@@ -1,4 +1,3 @@
-// Text
 import 'package:flutter/material.dart';
 
 const String fontFamily = 'Calibri';
